@@ -6,7 +6,6 @@ import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataAccessException;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.annotation.KafkaHandler;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -15,7 +14,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import com.webdev.ws.errors.NotRetryableException;
-import com.webdev.ws.errors.RetryableException;
 import com.webdev.ws.events.PaymentProcessEvent;
 import com.webdev.ws.model.PaymentModel;
 import com.webdev.ws.repository.PaymentRepository;
