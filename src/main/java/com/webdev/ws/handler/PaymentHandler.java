@@ -65,7 +65,7 @@ public class PaymentHandler {
 			kafkaTemplate.send(PAYMENT_EVENT,event);
 			logger.info("Payment successfull, Sent to topic"+PAYMENT_EVENT);
 		}
-		}catch(DataAccessException e)
+		}catch(Exception e)
 		{
 			PaymentFailedEvent failedEvent = new PaymentFailedEvent(command.getProductId()
 					,command.getOrderId(),command.getQuantity());
